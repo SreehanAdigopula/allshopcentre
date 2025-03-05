@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AllShopCenter</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="style.css">
+      <style>
+
+       
+
+        #navibar li{
+        margin-bottom: 2px;
+        }
+        
+        
+        #header{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 20px 80px;
+          background: #E3E6F3;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+          z-index: 999;
+          position: sticky;
+          top: 0;
+          left: 0;
+        }
+        #navibar{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        #navibar li{
+          list-style: none;
+          padding: 0 20px;
+        }
+
+        #navibar li a{
+          text-decoration: none;
+          font-size: 16px;
+          font-weight:600;
+          color: black;
+          transition: 0.3s ease;
+        }
+     
+        #navibar li a: hover,
+        #navibar li a.active{
+           color: #088178;
+         }
+        #navibar li a.active::after,
+        #navibar li.a:hover::after {
+          content:"";
+          width:30%;
+          height: 2px;
+          background: #088178;
+          position: absolute;
+          bottom: -4px;
+          left: 20px;
+        }
+
+        #hero{
+          background-image: url("img/d2.png");
+          height: 90vh;
+          width: 100%;
+          background-size: cover;
+          background-position: top 20% right 0;
+          padding: 0 80px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+        }
+
+        #hero h4{
+          padding-bottom: 15px;
+        }
+        #hero h1{
+          color: darkcyan;
+        }
+        #hero button{
+          background-image: url("img/button.png");
+          background-color: transparent;
+          color: darkcyan;
+          border: 0;
+          padding: 14px 80px 14px 65px;
+          background-repeat: no-repeat;
+          cursor: pointer;
+          font-weight: 700;
+          font-size: 15px;
+        }
+ /*the methods to make the cards*/       
+.section-p1{
+  padding: 40px 80px;
+}
+
+        .section-m1 {
+  margin: 40px 0;
+}
+        #product1{
+          text-align: center;
+        }
+
+
+
+        #product1 .pro-container{
+          display: flex;
+          justify-content: space-between;
+          padding: 20px;
+          flex-wrap: wrap;
+        }
+
+        #product1 .pro{
+          width: 23%;
+          min-width: 250px; 
+          padding: 10px 12px;
+          border: 1px solid #cce7d0; 
+          border-radius: 25px;
+          cursor: pointer;
+          box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+          margin: 15px 0;
+          transition: 0.2s ease;
+          position: relative;
+        }
+
+        #product1 .pro:hover{
+          box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        #product1 .pro img{
+          width: 100%;
+          border-radius: 20px;
+        }
+
+        #product1 .pro .des{
+          text-align: start;
+          padding: 10px 0;
+        }
+
+        #product1 .pro .des span{
+          color: #606063;
+          font-size: 12px;
+        }
+        #product1 .pro .des h5{
+          padding-top: 7px;
+          color: #1a1a1a;
+          font-size: 14px;
+        }
+
+        #product1 .pro .des i{
+          font-size: 12px;
+          color: gold;
+        }
+
+        #product1 .pro .des h4{
+          padding-top: 7px;
+          font-size: 15px;
+          font-weight: 700;
+          color: #088178;
+        }
+        #product1 .pro .cart{
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          border-radius: 50px;
+          background-color: #e8f6ea;
+          font-weight: 500;
+          color: darkcyan;
+          border: 1px solid #cce7d0;
+          position: absolute;
+          bottom: 20px;
+          right: 10px;
+        }
+
+        #banner{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          background: url("img/banner/offf.png");
+          width: 100%;
+          height: 40vh;
+          background-size: cover;
+          background-position: center;
+        }
+
+
+        #banner h4{
+          color: white;
+          font-size: 16px;
+        }
+
+
+        #banner h2{
+          color: white;
+          font-size: 30px;
+          padding: 10px 0;
+        }
+
+        #banner h2 span{
+          color: red;
+        }
+        #banner button:hover{
+          background: darkcyan;
+          color: white;
+          transform: translateY(-10px);
+          transition: transform 0.3s ease 0;
+        }
+
+        #sm-banner{
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+
+        #newsletter{
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          align-items: center;
+          background-image: url("img/banner/b14.png");
+          background-repeat: no-repeat;
+          background-position: 20% 30%;
+          background-color: #041e42;
+        }
+
+
+        #newsletter h4{
+          font-size: 22px;
+          font-weight: 700;
+          color: white;
+        }
+
+        
+        #newsletter p{
+          font-size: 14px;
+          font-weight: 600;
+          color: #818ea0;
+        }  
+
+        #newsletter p span{
+          color: #ffbd27;
+        }
+
+
+        #newsletter .form{
+          display: flex;
+          width: 40%;
+        }
+
+
+        #newsletter input{
+          height: 3.125rem;
+          padding: 0 1.25em;
+          font-size: 14px;
+          width: 100%;
+          border: 1px solid transparent;
+          border-radius: 4px;
+          outline: none;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        #newsletter button{
+          background-color: darkcyan;
+          color: white;
+          white-space: nowrap;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+
+        footer{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+
+        footer .col{
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          margin-bottom: 20px;
+        }
+
+
+        footer .logo{
+          margin-bottom: 30px;
+        }
+
+        footer h4{
+          font-size: 14px;
+          padding-bottom: 20px;
+        }
+
+        footer p{
+          font-size: 13px;
+          margin: 0 0 8px 0;
+        }
+        footer a{
+          font-size: 13px;
+          text-decoration: none;
+          color: #222;
+          margin-bottom: 10px;
+        }
+
+        footer .install .row img{
+          border: 1px solid darkcyan;
+          border-radius: 6px;
+        }
+
+        #aboutus{
+          background-color: #E3E6F3;
+        }
+
+        
+        #aboutus .us{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        } 
+
+        #aboutus .us .usinfo,
+        #aboutus .us .imgban{
+          padding: 20px;
+        }
+        
+	</style>
+      
+    </head>
+
+    <body>
+     <section id="header">
+        <a href="#"><img src="/img/apple-touch-icon.png" class="logo" width="85px"></a>
+        <div>
+          <ul id="navibar">
+            <li><a href="index.html" class="active">Go Back Home</a></li>
+          </ul>
+          
+        </div>
+      </section>
+
+     <section id="aboutus">
+       <div class="us">
+         <div class="imgban">
+           <img src="img/about/a6.jpg" width="100%">
+         </div>
+         <div class="usinfo">
+           <h4>Who Are We?</h4>
+           <p>She had been told time and time again that the most important steps were the first and the last. It was something that she carried within her in everything she did, but then he showed up and disrupted everything. He told her that she had it wrong. The first step wasn't the most important. The last step wasn't the most important. It was the next step that was the most important.</p>
+         </div>
+       </div>
+     </section> 
+    
+     <section id="newsletter" class="section-p1 section-m1">
+       <div class="newstext">
+         <h4>Sign Up For Newsletter</h4>
+         <p>Get E-mail Updates about lastest shop <span>Special Offers</span></p>
+       </div>
+       <div class="form">
+         <input type="text" placeholder="Your E-mail Address">
+         <button class="normal">Sign Up</button>
+       </div>
+     </section>  
+
+
+
+    <footer class="section-p1">
+      <div class="col">
+        <img src="/img/apple-touch-icon.png" class="logo">
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> 562 Wellington Road, Street 32, San Fransico</p>
+        <p><strong>Phone:</strong> +1 5676 2365/ +91 6568 3256</p>
+        <p><strong>Hours:</strong> Mon-Sat:8am-9pm</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="">About Us</a>
+        <a href="">Deleviry Information</a>
+        <a href="">Privacy Policy</a>
+        <a href="">Terms & Conditions</a>
+        <a href="">Contact Us</a>
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Shop Now!</a>
+        <a href="cart.html"">MY Cart</a>
+        <a href="">MY Wishlist</a>
+        <a href="">Track MY Order</a>
+        <a href="">Help</a>
+      </div>
+      <div class="col install">
+        <h4>Install Our App</h4>
+        <p>With App Store Or Play Store</p>
+        <div class="row">
+          <img src="img/pay/app.jpg">
+          <img src="img/pay/play.jpg">
+        </div>
+        <p>Secrued Payment Gateway</p>
+        <img src="img/pay/pay.png">
+      </div>  
+    <center> <h4> 2023 This is just a sample webpage</h4></center>
+    </footer>  
+
+     
+        <script src="script.js"></script>
+    </body>
+
+</html>

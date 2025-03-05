@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AllShopCenter</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="style.css">
+      <style>
+        
+        
+        #header{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 20px 80px;
+          background: #E3E6F3;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+          z-index: 999;
+          position: sticky;
+          top: 0;
+          left: 0;
+        }
+        #navibar{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        #navibar li{
+          list-style: none;
+          padding: 0 20px;
+        }
+
+        #navibar li a{
+          text-decoration: none;
+          font-size: 16px;
+          font-weight:600;
+          color: black;
+          transition: 0.3s ease;
+        }
+     
+        #navibar li a: hover,
+        #navibar li a.active{
+           color: #088178;
+         }
+        #navibar li a.active::after,
+        #navibar li.a:hover::after {
+          content:"";
+          width:30%;
+          height: 2px;
+          background: #088178;
+          position: absolute;
+          bottom: -4px;
+          left: 20px;
+        }
+
+        #hero{
+          background-image: url("img/d2.png");
+          height: 90vh;
+          width: 100%;
+          background-size: cover;
+          background-position: top 20% right 0;
+          padding: 0 80px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+        }
+
+        #hero h4{
+          padding-bottom: 15px;
+        }
+        #hero h1{
+          color: darkcyan;
+        }
+        #hero button{
+          background-image: url("img/button.png");
+          background-color: transparent;
+          color: darkcyan;
+          border: 0;
+          padding: 14px 80px 14px 65px;
+          background-repeat: no-repeat;
+          cursor: pointer;
+          font-weight: 700;
+          font-size: 15px;
+        }
+ /*the methods to make the cards*/       
+.section-p1{
+  padding: 4px 80px;
+}
+        #product1{
+          text-align: center;
+        }
+
+
+
+        #product1 .pro-container{
+          display: flex;
+          justify-content: space-between;
+          padding: 20px;
+          flex-wrap: wrap;
+        }
+
+        #product1 .pro{
+          width: 23%;
+          min-width: 250px; 
+          padding: 10px 12px;
+          border: 1px solid #cce7d0; 
+          border-radius: 25px;
+          cursor: pointer;
+          box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+          margin: 15px 0;
+          transition: 0.2s ease;
+          position: relative;
+        }
+
+        #product1 .pro:hover{
+          box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        #product1 .pro img{
+          width: 100%;
+          border-radius: 20px;
+        }
+
+        #product1 .pro .des{
+          text-align: start;
+          padding: 10px 0;
+        }
+
+        #product1 .pro .des span{
+          color: #606063;
+          font-size: 12px;
+        }
+        #product1 .pro .des h5{
+          padding-top: 7px;
+          color: #1a1a1a;
+          font-size: 14px;
+        }
+
+        #product1 .pro .des i{
+          font-size: 12px;
+          color: gold;
+        }
+
+        #product1 .pro .des h4{
+          padding-top: 7px;
+          font-size: 15px;
+          font-weight: 700;
+          color: #088178;
+        }
+        #product1 .pro .cart{
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          border-radius: 50px;
+          background-color: #e8f6ea;
+          font-weight: 500;
+          color: darkcyan;
+          border: 1px solid #cce7d0;
+          position: absolute;
+          bottom: 20px;
+          right: 10px;
+        }
+
+        #banner{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          background: url("img/banner/offf.png");
+          width: 100%;
+          height: 40vh;
+          background-size: cover;
+          background-position: center;
+        }
+
+
+        #banner h4{
+          color: white;
+          font-size: 16px;
+        }
+
+
+        #banner h2{
+          color: white;
+          font-size: 30px;
+          padding: 10px 0;
+        }
+
+        #banner h2 span{
+          color: red;
+        }
+        #banner button:hover{
+          background: darkcyan;
+          color: white;
+        }
+
+        #sm-banner{
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+
+
+        #page-header{
+          background-image: url("img/banner/house.png");
+          width: 100%;
+          height: 80vh;
+          background-size: cover;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          flex-direction: column;
+          padding: 14px;
+        }
+
+        #pagination{
+          text-align: center;
+          
+        }
+
+
+
+        #pagination a{
+          text-decoration: none;
+          background-color: darkcyan;
+          padding: 15px 20px;
+          border-radius: 4px;
+          color: white;
+          font-weight: 600;
+        }
+
+
+        #pagination a i{
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+
+
+        .section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+       
+	</style>
+      
+    </head>
+
+    <body>
+      <section id="header">
+        <a href="#"><img src="/img/apple-touch-icon.png" class="logo" width="85px"></a>
+        <div>
+          <ul id="navibar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="food.html"class="active">Food</a></li>
+            <li><a href="clothes.html">Clothes</a></li>
+            <li><a href="electronic.html">Electronic</a></li>
+            <li><a href="house.html">HouseHold</a></li>
+            
+            
+            <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+          </ul>
+          
+        </div>
+      </section>
+       
+       
+     <section id="page-header">
+      
+       <h2>#HouseHoldItemShop</h2>
+     
+       
+     </section>
+
+     <section id="product1" class="section-p1">
+       
+       <div class="pro-container">
+         <div class="pro">
+           <img src="img/products/bed2.jpg">
+           <div class="des">
+             <span>Ikea</span>
+             <h5>Queen Size Bed Type1</h5>
+             <div class="star">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               
+             </div>
+             <h4>$388</h4>
+           </div>
+           <a href="cart.html"><i class="fal fa-shopping-cart cart" ></i> </a>
+         </div>
+         <div class="pro">
+           <img src="img/products/bedo.jpg">
+           <div class="des">
+             <span>Ikea</span>
+             <h5>Queen Sized Bed Type2</h5>
+             <div class="star">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+              
+             </div>
+             <h4>$412</h4>
+           </div>
+           <a href="cart.html"><i class="fal fa-shopping-cart cart" ></i> </a>
+         </div>
+         <div class="pro">
+           <img src="img/products/black spoons.jpeg">
+           <div class="des">
+             <span>Ikea</span>
+             <h5>Kitchen Spoons</h5>
+             <div class="star">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               
+             </div>
+             <h4>$6</h4>
+           </div>
+           <a href="cart.html"><i class="fal fa-shopping-cart cart" ></i> </a>
+         </div>
+         <div class="pro">
+           <img src="img/products/table1.jpg">
+           <div class="des">
+             <span>Ikea</span>
+             <h5>Living Room Table</h5>
+             <div class="star">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+             </div>
+             <h4>$98</h4>
+           </div>
+           <a href="cart.html"><i class="fal fa-shopping-cart cart" ></i> </a>
+         </div>
+         <div class="pro">
+           <img src="img/products/painting 2.jpg">
+           <div class="des">
+             <span>Kurts</span>
+             <h5>Hexagon Paintings</h5>
+             <div class="star">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               
+             </div>
+             <h4>$80</h4>
+           </div>
+           <a href="cart.html"><i class="fal fa-shopping-cart cart" ></i> </a>
+         </div>
+         <div class="pro">
+           <img src="img/products/plammix plant.jpeg">
+           <div class="des">
+             <span>Ikea</span>
+             <h5>Malm Plant</h5>
+             <div class="star">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+             </div>
+             <h4>$7</h4>
+           </div>
+           <a href="cart.html"><i class="fal fa-shopping-cart cart" ></i> </a>
+         </div>
+         <div class="pro">
+           <img src="img/products/cooler plate.jpg">
+           <div class="des">
+             <span>Ikea</span>
+             <h5>Gold colored plates with Black Face</h5>
+             <div class="star">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               
+             </div>
+             <h4>$4</h4>
+           </div>
+           <a href="cart.html"><i class="fal fa-shopping-cart cart" ></i> </a>
+         </div>
+         <div class="pro">
+           <img src="img/products/cool table.jpg">
+           <div class="des">
+             <span>RoyalOak</span>
+             <h5>Table (L Shape)</h5>
+             <div class="star">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               
+             </div>
+             <h4>$1000</h4>
+           </div>
+           <a href="cart.html"><i class="fal fa-shopping-cart cart" ></i> </a>
+         </div>
+         
+      
+         <div class="pro">
+           <img src="img/products/pan.jpg">
+           <div class="des">
+             <span>Ikea</span>
+             <h5>Pan</h5>
+             <div class="star">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+              
+             </div>
+             <h4>$5</h4>
+           </div>
+           
+         </div>
+         <div class="pro">
+           <img src="img/products/plastic spoons.jpg">
+           <div class="des">
+             <span>Prestige</span>
+             <h5>Plastic Kitchen Spoons</h5>
+             <div class="star">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               
+             </div>
+             <h4>$6</h4>
+           </div>
+           
+         </div>
+         <div class="pro">
+           <img src="img/products/wodden spoons.jpeg">
+           <div class="des">
+             <span>Prestige</span>
+             <h5>Wooden Spoons</h5>
+             <div class="star">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               
+             </div>
+             <h4>$9</h4>
+           </div>
+           
+         </div>
+         <div class="pro">
+           <img src="img/products/plate2.jpg">
+           <div class="des">
+             <span>Prestige</span>
+             <h5>Seramic Plates</h5>
+             <div class="star">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+              
+             </div>
+             <h4>$8</h4>
+           </div>
+           
+         
+         
+       </div>
+     </section>
+
+         <section id="newsletter" class="section-p1 section-m1">
+       <div class="newstext">
+         <h4>Sign Up For Newsletter</h4>
+         <p>Get E-mail Updates about lastest shop <span>Special Offers</span></p>
+       </div>
+       <div class="form">
+         <input type="text" placeholder="Your E-mail Address">
+         <button class="normal">Sign Up</button>
+       </div>
+     </section>   
+
+
+      
+    <footer class="section-p1">
+      <div class="col">
+        <img src="/img/apple-touch-icon.png" class="logo">
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> 562 Wellington Road, Street 32, San Fransico</p>
+        <p><strong>Phone:</strong> +1 5676 2365/ +91 6568 3256</p>
+        <p><strong>Hours:</strong> Mon-Sat:8am-9pm</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="about.html">About Us</a>
+        <a href="">Deleviry Information</a>
+        <a href="">Privacy Policy</a>
+        <a href="">Terms & Conditions</a>
+        <a href="">Contact Us</a>
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Shop Now!</a>
+        <a href="cart.html"">MY Cart</a>
+        <a href="">MY Wishlist</a>
+        <a href="">Track MY Order</a>
+        <a href="">Help</a>
+      </div>
+      <div class="col install">
+        <h4>Install Our App</h4>
+        <p>With App Store Or Play Store</p>
+        <div class="row">
+          <img src="img/pay/app.jpg">
+          <img src="img/pay/play.jpg">
+        </div>
+        <p>Secrued Payment Gateway</p>
+        <img src="img/pay/pay.png">
+      </div>  
+    <center> <h4> 2023 This is just a sample webpage</h4></center>
+    </footer> 
+     
+        <script src="script.js"></script>
+    </body>
+
+</html>
